@@ -24,7 +24,7 @@ A simple string containing exactly the description and nothing else.
 
 - I assumed that the first result of a search was likely to be the most accurate.
 
-- The user is forced to provide an accurately spelled and correctly formatted name (like `Helen_Keller`, not `Helen Keller` or `HelenKeller`). Guessing what a user intended a name to be is a hard problem and not in scope for this task.
+- The user is forced to provide an accurately spelled and correctly formatted name (like `Helen_Keller`, not `Helen Keller` or `HelenKeller`). Guessing what a user intended a name to be is a hard problem and not (in my view) in scope for this task.
 
 - There is basic code-level support to parse input for safety from injection attacks.
 
