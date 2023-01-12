@@ -14,7 +14,7 @@ lang: Language of desired results.
 
 ### Output schema
 ```
-A simple string contained exactly the description and nothing else.
+A simple string containing exactly the description and nothing else.
 ```
 
 ### Design decisions
@@ -30,7 +30,7 @@ A simple string contained exactly the description and nothing else.
 
 ## Keeping the service highly functional and available
 
-- The service needs a proxy in front of it to protect from DDoS attacks.
+- The service needs a proxy in front of it to protect from DDoS attacks. The proxy should probably enforce rate limiting as a direct prevention of DDoS attacks.
 - The service is expected to be used globally by millions of customers with a very high QPS. As such, the service needs a load balancer to ensure that traffic is equally distributed among a global network of data centers.
 - The service would benefit from a cache to store frequent requests from customers. Since people-related queries are often time-related (eg, "Justin Bieber" queries increase whenever a new album drops), it might make sense to use a LRU (least recently used) cache eviction strategy.
 - The service is designed to query the Wikipedia API in response to all queries. It might make sense to instead copy all the data on Wikipedia into a database/storage system closer to the API's servers, updating as need be (the update system would have to be real-time, since a batch processing approach just isn't fast enough to reflect fast-changing current events related to a person).
