@@ -11,10 +11,6 @@ public class GooglePersonController {
 
     GooglePersonService googlePersonService = new GooglePersonService();
 
-    // TODO
-    // 3. Develop full test suite for whatever it is. (get here by Tues night).
-    // 4. Write down to use bootrun, or maybe deploy on Cloud. Also respond to questions. (Weds)
-
     @GetMapping("/greeting")
     public ResponseEntity<String> greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new ResponseEntity<>(String.format("Hello, %s", name), HttpStatus.OK);
